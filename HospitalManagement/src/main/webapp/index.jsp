@@ -6,8 +6,8 @@
 <meta charset="ISO-8859-1">
 <title>Hospital Management</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
-<script src="Components/jquery-3.3.1.min.js"></script>
-<script src="Components/main.js"></script>
+<script src="Componets/jquery-3.3.1.min.js"></script>
+<script src="Componets/main.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -16,7 +16,7 @@
 
 				<h1 class="m-3">Hospital details</h1>
 
-				<form id="formStudent">
+				<form id="formHospital">
 
 					<!-- NAME -->
 					<div class="input-group input-group-sm mb-3">
@@ -75,7 +75,7 @@
 		<br>
 
 		<div class="row">
-			<div class="col-12" id="colStudents"></div>
+			<div class="col-12" id="colHospital"></div>
 		</div>
 	</div>
 </body>
