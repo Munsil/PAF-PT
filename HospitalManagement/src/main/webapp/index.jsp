@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Student details</title>
+<title>Hospital Management</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.3.1.min.js"></script>
 <script src="Components/main.js"></script>
@@ -14,40 +14,56 @@
 		<div class="row">
 			<div class="col-8">
 
-				<h1 class="m-3">Student details</h1>
+				<h1 class="m-3">Hospital details</h1>
 
 				<form id="formStudent">
 
 					<!-- NAME -->
 					<div class="input-group input-group-sm mb-3">
-						5
+					
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="lblName">Name: </span>
 						</div>
 						<input type="text" id="txtName" name="txtName">
 					</div>
-					<!-- GENDER -->
+					<!-- ADDRESS -->
 					<div class="input-group input-group-sm mb-3">
+					
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Gender: </span>
+							<span class="input-group-text" id="lblName">Address: </span>
 						</div>
-						&nbsp;&nbsp;Male <input type="radio" id="rdoGenderMale"
-							name="rdoGender" value="Male"> &nbsp;&nbsp;Female <input
-							type="radio" id="rdoGenderFemale" name="rdoGender" value="Female">
+						<input type="text" id="txtAddress" name="txtAddress">
 					</div>
-					<!-- YEAR -->
+					
+					<!-- Charge -->
 					<div class="input-group input-group-sm mb-3">
+					
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Year: </span>
+							<span class="input-group-text" id="lblName">Charge: </span>
 						</div>
-						<select id="ddlYear" name="ddlYear">
-							<option value="0">--Select year--</option>
-							<option value="1">1st year</option>
-							<option value="2">2nd year</option>
-							<option value="3">3rd year</option>
-							<option value="4">4th year</option>
-						</select>
+						<input type="text" id="txtCharge" name="txtCharge">
 					</div>
+					
+					<!-- PHONE -->
+					<div class="input-group input-group-sm mb-3">
+					
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Phone Number: </span>
+						</div>
+						<input type="text" id="txtPhone" name="txtPhone">
+					</div>
+					
+					<!-- ROOMCOUNT -->
+					<div class="input-group input-group-sm mb-3">
+					
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Room Count: </span>
+						</div>
+						<input type="text" id="txtCount" name="txtCount">
+					</div>
+					
+					
+					
 					<div id="alertSuccess" class="alert alert-success"></div>
 					<div id="alertError" class="alert alert-danger"></div>
 					<input type="button" id="btnSave" value="Save"
@@ -64,12 +80,12 @@
 	</div>
 </body>
 
-
+<!--  
 <h2>Jersey RESTful Web Application!</h2>
 <p>
 	<a href="webresources/hospitals">Jersey resource</a>
 <p>
 	Visit the <a href="http://jersey.java.net">Project Jersey website</a>
 	for more information on Jersey!
-	</body>
+-->	
 </html>
