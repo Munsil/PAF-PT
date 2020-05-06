@@ -21,8 +21,8 @@ $(document).on("click", "#btnSave", function(event)
 		 return;
 		 }
 		// If valid----------------------
-		var hospital = getHospitalCard($("#txtName").val().trim(), $("#txtAddress").val().trim(), $("#txtCharge").val().trim(),
-							$("#txtPhone").val().trim(), $("#txtCount").val().trim());
+		var hospital = getHospitalCard($("#hospitalid").val().trim(),$("#name").val().trim(), $("#address").val().trim(), $("#charge").val().trim(),
+							$("#phonenumber").val().trim(), $("#roomcount").val().trim());
 
 				$("#colHospital").append(hospital);
 				
@@ -44,23 +44,27 @@ $(document).on("click", ".remove", function(event)
 	function validateItemForm()
 	{
 	// NAME
-			if ($("#txtName").val().trim() == "")
+			if ($("#hospitalid").val().trim() == "")
+			 {
+					return "Insert Hospital Id.";
+			 }
+			if ($("#name").val().trim() == "")
 			 {
 					return "Insert Hospital name.";
 			 }
-			if ($("#txtAddress").val().trim() == "")
+			if ($("#address").val().trim() == "")
 			 {
 					return "Insert Address.";
 			 }
-			if ($("#txtCharge").val().trim() == "")
+			if ($("#charge").val().trim() == "")
 			 {
 					return "Insert Charge.";
 			 }
-			if ($("#txtPhone").val().trim() == "")
+			if ($("#phonenumber").val().trim() == "")
 			 {
 					return "Insert Phone number.";
 			 }
-			if ($("#txtCount").val().trim() == "")
+			if ($("#roomcount").val().trim() == "")
 			 {
 					return "Insert Room count.";
 			 }
@@ -68,17 +72,19 @@ $(document).on("click", ".remove", function(event)
 			return true; 
 	}
 	
-	function getHospitalCard(name, address, charge, phone, count)
+	function getHospitalCard(hospitalid, name, address, charge, phone, count)
 	{
 			
 			var hospital = "";
 			hospital += "<div class=\"hospital card bg-light m-2\"style=\"max-width: 15rem; float: left;\">"; 
 			hospital += "<div class=\"card-body\">";
+			hospital += "Hospital Id :"+ hospitalid + " ";
+			hospital += "<br>";
 			hospital += "Name :"+ name + " ";
 			hospital += "<br>";
 			hospital += "Address :"+address + " ";
 			hospital += "<br>";
-			hospital += "Rs: "+ charge +".00";
+			hospital += "Rs: "+charge +".00";
 			hospital += "<br>";
 			hospital += "Phone Number :"+phone + " ";
 			hospital += "<br>";

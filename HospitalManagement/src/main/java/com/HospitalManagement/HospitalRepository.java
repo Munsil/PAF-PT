@@ -28,9 +28,9 @@ public class HospitalRepository{
 		
 	}
 	
-	public List<Hospital> viewHospital() {
+	public ArrayList<Hospital> viewHospital() {
 		
-		List<Hospital> hospitals = new ArrayList<>();
+		ArrayList<Hospital> hospitals = new ArrayList<>();
 		String sql = "select * from hospital";
 		try {
 			
@@ -47,8 +47,12 @@ public class HospitalRepository{
 				hos.setRoomcount(rs.getInt(6));
 				
 				hospitals.add(hos);
-				 
+				
+ 
 			}
+			
+			
+			 
 		}
 		catch(Exception e) {
 			
