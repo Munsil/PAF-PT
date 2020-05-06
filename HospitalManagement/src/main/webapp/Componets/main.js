@@ -21,15 +21,9 @@ $(document).on("click", "#btnSave", function(event)
 		 return;
 		 }
 		// If valid----------------------
-		var hospital = getHospitalCard($("#hospitalid").val().trim(),$("#name").val().trim(), $("#address").val().trim(), $("#charge").val().trim(),
-							$("#phonenumber").val().trim(), $("#roomcount").val().trim());
-
-				$("#colHospital").append(hospital);
-				
-				 $("#alertSuccess").text("Saved successfully.");
-				 $("#alertSuccess").show();
-				
-				 $("#formHospital")[0].reset();
+		$("#formHospital").submit(); 
+		
+		
 });
 // REMOVE==========================================
 $(document).on("click", ".remove", function(event)
@@ -71,7 +65,7 @@ $(document).on("click", ".remove", function(event)
 			
 			return true; 
 	}
-	
+/*	
 	function getHospitalCard(hospitalid, name, address, charge, phone, count)
 	{
 			
@@ -95,3 +89,5 @@ $(document).on("click", ".remove", function(event)
 			hospital += "</div>";
 			return hospital;
 	}
+
+	*/

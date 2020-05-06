@@ -31,8 +31,12 @@ public class HospitalRepository{
 	public ArrayList<Hospital> viewHospital() {
 		
 		ArrayList<Hospital> hospitals = new ArrayList<>();
+		
+		
 		String sql = "select * from hospital";
 		try {
+			
+			
 			
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);

@@ -24,7 +24,7 @@
 
 				<h1 class="m-3">Hospital details</h1>
 
-				<form id="formHospital" name="formHospital" method="post" action="hospital.jsp">
+				<form id="formHospital" name="formHospital" method="post" action="Hospital.jsp">
 							 Hospital Id:
 							<input id="hospitalid" name="hospitalid" type="text"
 							 class="form-control form-control-sm">
@@ -57,12 +57,12 @@
 				
 				<br>
 				<%
-					//HospitalRepository hospitalObj = new HospitalRepository();
-					//out.print(hospitalObj.viewHospital());
+				//	HospitalRepository hospitalObj = new HospitalRepository();
+				//	out.print(hospitalObj.viewHospital());
 				%>
 				<br>
 			
-				<table cellspacing="2" cellpadding="2">
+				<table class="table table-dark">
 					
 				 	<tr>
 					<th>Hospital ID</th>
@@ -71,17 +71,22 @@
 					<th>Charge</th>
 					<th>Phone Number</th>
 					<th>Room Count</th>
+					<th>Update</th>
+					<th>Remove</th>
 					</tr>
 					 
-					<% for( int i=0; i < HospitalDetails.size(); i++){ %>
-					
+					<% for(int i=0; i<HospitalDetails.size(); i++){ %>
 					<% Hospital hos = (Hospital)HospitalDetails.get(i); %>
+					 
 								
 						<tr>
 						    <td><%=hos.getHospitalid()%></td>
 							<td><%=hos.getName()%></td>
 							<td><%=hos.getAddress()%></td>
 							<td><%=hos.getCharge()%></td>
+							<td><%=hos.getPhonenumber()%></td>
+							<td><%=hos.getRoomcount()%></td>
+							
 						</tr>
 						<%
 						}
